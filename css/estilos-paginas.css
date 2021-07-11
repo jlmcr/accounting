@@ -1,0 +1,304 @@
+    * {
+        padding: 0%;
+        margin: 0%;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+    
+    body.contabilidad {
+        background: url("../img/FondoVerdozo2.jpg") #2d6a4f;
+        background-size: cover;
+        background-attachment: fixed;
+        /*    background-attachment: fixed;   FIJA LA IMAGEN*/
+    }
+    
+    body.excel {
+        background: url("../img/FondoVerdozo3.jpg") #2d6a4f;
+        background-size: cover;
+        background-attachment: fixed;
+        /*    background-attachment: fixed;   FIJA LA IMAGEN*/
+    }
+    /*NAVEGADOR*/
+    
+    nav {
+        background-color: #081c15de;
+        /*fijamos el menu*/
+        z-index: 100;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        /*pone el icono y la lista en una linea*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 27px;
+    }
+    
+    #icono {
+        width: 40px;
+        height: 40px;
+        padding: 15px;
+    }
+    
+    nav a {
+        text-decoration: none;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        /*display: flex; PONE LAS LISTAS EN UNA LINEA*/
+    }
+    
+    nav ul a {
+        color: tomato;
+        letter-spacing: 10px;
+        padding: 20PX;
+    }
+    
+    nav ul a:hover {
+        background-color: #1b4332de;
+    }
+    /*PRESENTACION*/
+    
+    div.presentacion {
+        /* position: absolute;   POSICIONAMOS ENCIMA DE ALGO/
+    */
+        z-index: 100;
+        width: 100%;
+        height: 100vh;
+        color: tomato;
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    div.presentacion-texto {
+        padding-top: 20vh;
+    }
+    
+    #texto1 {
+        color: white;
+        padding: 30px;
+        font-size: 17px;
+        letter-spacing: 3px;
+    }
+    
+    .presentacion h1.paginas {
+        font-size: 90px;
+    }
+    /*ARTICULOS CONTENIDO*/
+    
+    #titulo-contenido {
+        width: 100%;
+        color: springgreen;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    
+    .articulo-pag-excel {
+        /*ariculo individual*/
+        color: white;
+        width: 90%;
+        padding-bottom: 100px;
+        text-align: center;
+        margin: auto;
+    }
+    /*///////////////////////////////////////////////*/
+    
+    .contenido {
+        width: 90%;
+        margin: auto;
+    }
+    
+    .contenedor-imagenes {
+        display: flex;
+        width: 85%;
+        margin: auto;
+        justify-content: space-around;
+        /*justificar-contenido: espacio alrededor;*/
+        flex-wrap: wrap;
+        /*envoltura flexible: envoltura;*/
+    }
+    
+    .contenedor-imagenes .imagen {
+        width: 200px;
+        position: relative;
+        height: 250px;
+        margin: 0 10px 10px 0;
+        box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75)
+    }
+    
+    .imagen img {
+        width: 100%;
+        height: 100%;
+        object-fit: cocover;
+    }
+    
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #003049;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: .5s ease;
+    }
+    
+    .overlay p {
+        color: #fff;
+        font-weight: 300;
+        font-size: 1.5rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+    
+    .imagen:hover .overlay {
+        height: 100%;
+        cursor: pointer;
+    }
+    
+    hr {
+        width: 90%;
+        margin: auto;
+        border: tomato solid 0.5px;
+    }
+    /* 
+    //////////////////////////////////////////////////////
+    
+    FOOTER */
+    
+    .footer-enlaces {
+        background-color: #081c15;
+        color: #d8f3dc;
+        width: 100%;
+        height: 100vh;
+        /*centramos verticalmente la tabla dentro de este*/
+        display: flex;
+        align-items: center;
+    }
+    
+    .footer-enlaces table {
+        background-color: #081c15;
+        color: #d8f3dc;
+        width: 80%;
+        margin: auto;
+        font-size: 1.5rem;
+    }
+    
+    .footer-enlaces table td {
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .footer-enlaces table a {
+        color: #d8f3dc;
+        text-decoration: none;
+    }
+    
+    .footer-enlaces table li {
+        list-style-type: none;
+        margin-bottom: 20px;
+    }
+    
+    .footer-enlaces table a:hover {
+        color: tomato;
+    }
+    
+    .footer {
+        background: #2d6a4f;
+        color: #d8f3dc;
+        padding: 20px 0 0 0;
+        text-align: center;
+        padding-bottom: 20px;
+        letter-spacing: 2px;
+        font-size: 20px;
+    }
+    /*menu botones*/
+    
+    .menu-btn-cel {
+        font-size: 0;
+        position: absolute;
+        cursor: pointer;
+        top: 8px;
+        right: 20px;
+        z-index: 100;
+        /*z-index: 100;pone encima de todo segun el codigo*/
+        /*em relacion a la fuente del padre*/
+        color: tomato;
+    }
+    
+    @media screen and (max-width:750px) {
+        /*BOTON LISTA O MENU PARA CELULARES*/
+        .menu-btn-cel {
+            font-size: 2rem;
+            position: absolute;
+            cursor: pointer;
+            top: 8px;
+            right: 20px;
+            z-index: 100;
+            /*z-index: 100;pone encima de todo segun el codigo*/
+            /*em relacion a la fuente del padre*/
+            color: tomato;
+        }
+        /*MENU*/
+        nav ul {
+            /*combierte el menu en vertical*/
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #081c15af;
+            height: 1000px;
+            transform: translate(-400px);
+            font-size: 2rem;
+            /*rem relacion a la fuente de la riz*/
+            padding-top: 50px;
+            /*configura que la transicion de ocultar y mostrar no se de manera bursca*/
+            transition: transform 1s ease in ease-in-out;
+        }
+        nav ul.ul-menu.show {
+            /*clase*/
+            transform: translate(-20px);
+        }
+        nav ul.ul-menu {
+            /*oculta el menu*/
+            transform: translate(-600px);
+        }
+        nav ul.ul-menu a {
+            padding: 10px;
+        }
+        nav ul.ul-menu li {
+            padding: 30px 0 20px 30px;
+        }
+        nav {
+            position: relative;
+        }
+        /*PRESETACION*/
+        .presentacion h1.paginas {
+            font-size: 3rem;
+        }
+        p#texto1 {
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+        /*CONTENIDO*/
+        /*ARICULOS*/
+        article {
+            font-size: 0.8rem;
+        }
+        .imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /*FOOTER*/
+        .footer-enlaces table {
+            width: 100%;
+            font-size: 0.8rem;
+        }
+    }
